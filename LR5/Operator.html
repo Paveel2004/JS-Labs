@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="a">Введите коэффициент а:</label>
+    <input type="number" id="a" placeholder="Введите а">
+    <br>
+    <label for="b">Введите коэффициент b:</label>
+    <input type="number" id="b" placeholder="Введите b">
+    <br>
+    <label for="c">Введите коэффициент с:</label>
+    <input type="number" id = "c" placeholder="Введите с">
+    <br>
+    <button onclick="calculateRoots()">Рассчитать корни</button>
+    <div id="result"></div>
+    <script> 
+        function calculateRoots()
+        {
+            const a = parseFloat(document.getElementById('a').value);
+            const b = parseFloat(document.getElementById('b').value);
+            const c = parseFloat(document.getElementById('c').value);
+
+            const discriminant = b**2 - 4 * a * c;
+
+            if (discriminant > 0)
+            {
+                const x1 = (-b + Math.sqrt(discriminant)) / (2*a);
+                const x2 = (-b - Math.sqrt(discriminant)) / (2*a);
+                document.getElementById('result').innerHTML = `Корни уравнения: x1 = ${x1}, x2 = ${x2}`;
+            }
+         else if (discriminant === 0) {
+                const x = -b / (2 * a);
+                document.getElementById('result').innerHTML = `Уравнение имеет один корень: x = ${x}`;
+            } else {
+                document.getElementById('result').innerHTML = 'Уравнение не имеет действительных корней';
+            }
+        }
+    </script>
+</body>
+</html>

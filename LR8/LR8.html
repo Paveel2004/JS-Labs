@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Для заданного массива экспериментальных данных рассчитать дисперсию,
+        используя функции определения среднего и дисперсии.
+        */
+        function generateRandomArray(length, min, max)
+        {
+            const randomArray = [];
+            for(i =0;i<length;i++)
+            {
+                const randomNumbet = Math.floor(Math.random()*(max-min+1))+min;
+                randomArray.push(randomNumbet);
+            }
+            return randomArray;
+        }
+        function calculateAverage(arr)
+        {
+            const sum = arr.reduce((num,i)=> num + i,0);
+            return sum / arr.length;
+        }
+        function calculateVariance(arr)
+        {
+            const average = calculateAverage(arr);
+            const squaredDifferences = arr.map(value => Math.pow(value - average, 2));
+            const variance = squaredDifferences.reduce((sum, value) => sum + value, 0);
+            return variance;
+        }
+        let arr = generateRandomArray(1000,1,7);
+        console.log(`Массив ${arr} \n Десперсия ${calculateVariance(arr)}`);
+        
+
+
+    </script>
+</body>
+</html>

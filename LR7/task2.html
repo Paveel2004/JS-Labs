@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*Дана последовательность действительных чисел a1, a2,...,an. Найти
+сумму первых чисел, произведение которых меньше заданного числа b.*/
+
+    function somOfOroductsLenssThanB(arr, b)
+    {
+        let sum = 0;
+        let product = 1;
+        for(i = 0; i< arr.length; i++)
+        {
+            product *= arr[i];
+            if(product < b)
+                sum += arr[i];
+            else
+                break;
+        }
+        return sum;
+    }
+    let a = parseFloat(prompt("Введите А"));
+    let b = parseFloat(prompt("Введите B"));
+    let n = parseFloat(prompt("Введите N"));
+    let arr = Array.from({length: n},(_,i) => a*i);
+    console.log(`Последовательность - ${arr} \n Сумма первых чисел проиведение которых меньше B - ${somOfOroductsLenssThanB(arr,b)} \n B = ${b}, A = ${a} N = ${n}`);
+    </script>
+
+</body>
+</html>

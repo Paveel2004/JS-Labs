@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Задание 1
+        let name  = prompt("Введите ваше имя");
+        document.write("Привет!, ",name," !")
+
+        //Задание 2
+        let num = 0;
+        function PrintTypeEndMeaning(expression)
+        {   
+            num++;
+            document.write("<br>");
+            document.write(num +") Type — "+typeof(expression)+" | Result — "+expression)
+        }
+        PrintTypeEndMeaning(1/2);
+        PrintTypeEndMeaning(12/0);
+        PrintTypeEndMeaning(true+false);
+        PrintTypeEndMeaning(12/"6");
+        PrintTypeEndMeaning("number"+15+3);
+        PrintTypeEndMeaning(15+3+"number");
+        PrintTypeEndMeaning([1]>null);
+        PrintTypeEndMeaning("foo"+ +"bar");
+        PrintTypeEndMeaning('true' == true);
+        PrintTypeEndMeaning(false == 'false');
+        PrintTypeEndMeaning(null == '');
+        PrintTypeEndMeaning(!!"false"==!!"true");
+        PrintTypeEndMeaning(['x']=='x');
+
+
+
+    </script>
+</body>
+</html>

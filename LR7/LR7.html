@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Дана последовательность х1,х2,…,хn. Найти номер элемента, который
+отличается от среднего арифметического значения элементов последовательности
+на минимальную величину.
+        */
+        function average(arr)
+        {
+            if (arr.length === 0) return 0;
+            const sum = arr.reduce((total,currentValue) => total + currentValue, 0);
+            return sum / arr.length;
+        }
+        function findClosectNumberIndex(arr, num)
+        {
+            let minDifference = Math.abs(arr[0] - num);
+            let closestIndex = 0;
+
+            for(i = 1; i < arr.length; i++)
+            {
+                const difference = Math.abs(arr[i] - num);
+
+                if(difference < minDifference)
+                {
+                    minDifference = difference;
+                    closestIndex = i;
+                }
+            }3
+            return closestIndex;
+
+            return arr.reduce()
+        }
+
+        let n = parseFloat(prompt("Введите n"));
+        let x = parseFloat(prompt("Введите x"));
+        /*for(i = 0;i < n; i++)
+        {
+            arr.push (x * i);
+        }*/
+        let arr = Array.from({length: n}, (_,i) => x*i);
+        console.log(`Массив элементов последовательности ${arr}`);
+        console.log(`Среднее арифметическое ${average(arr)}`);
+        console.log(`Индекс эллемента отличающегося на минимальюную величину ${findClosectNumberIndex(arr, average(arr))}`);
+        console.log(`Номер элемента отличающегося на мин величину ${findClosectNumberIndex(arr, average(arr))+1}`);
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let i = 1;
+        function nextTask()
+        {
+            console.groupEnd();
+            console.group("%c Задание "+i,'color: white; background-color: #95B46A');
+            i++;
+        }
+        function PrintExpressionAndResult(expression)
+        {
+            const result = eval(expression);
+            console.log(expression + ' = ' + result);
+
+        }
+
+        //Задание 1
+        nextTask();
+        let a = "10", b = "20";
+        console.log(Number(a)+Number(b));
+
+        //Задание 2
+        nextTask();
+        a = 101; b = 201;
+        console.log(String(a)+String(b));
+
+        //Задание 3
+        nextTask();
+        let num = 993986;
+        console.log(String(num).length);
+
+        //Задание 4
+        nextTask();
+        console.log(String(a).length + String(b).length);
+
+        //Задание 5
+        nextTask();
+        PrintExpressionAndResult('true + false');
+        PrintExpressionAndResult('8 / "2"');
+        PrintExpressionAndResult('"number" + 5 + 1');
+        PrintExpressionAndResult('5 + 1 + "number"');
+        PrintExpressionAndResult('7 && 2');
+        PrintExpressionAndResult('2 && 7');
+        PrintExpressionAndResult('null + 1');
+        PrintExpressionAndResult('undefined + 1');
+        PrintExpressionAndResult('"five" + + "two"');
+        PrintExpressionAndResult("'true' == true");
+        PrintExpressionAndResult("false == 'false'");
+        PrintExpressionAndResult("null == ''");
+        PrintExpressionAndResult('!!"false" == !!"true"');
+        PrintExpressionAndResult('"4" - 3');
+        PrintExpressionAndResult('"4px" - 3');
+        PrintExpressionAndResult('0 || "0" && 1');
+
+        
+    </script>
+</body>
+</html>

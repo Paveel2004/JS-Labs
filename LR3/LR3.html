@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //Задание 1
+        name = prompt("Введите ваше имя!");
+        document.write("Добро пожаловать в семью, "+name)
+
+        //Задание 2
+        alert("Привет\n javascript!");
+
+        //Задание 3
+        result = confirm("Нажмите ОК или Отмена");
+        alert("Вы нажали " + (result ? "Ок" : "Отмена"));
+
+        //Задание 4
+        do
+        { 
+            name = prompt("Введите ваше имя!");
+            result = confirm("Введённое имя правильное?");
+            if(result) alert("Здравствуйте, "+name);
+
+        }while(!result)
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

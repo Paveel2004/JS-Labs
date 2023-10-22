@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        //Задание 2
+        var a = "" + 1 + 0;
+        var b = 9;
+        alert(a > b);//true
+        
+        //Задание 3
+        a = "" - 1 + 0;
+        b = true + false;
+        alert(a > b)
+
+        //Задание 4
+        var num = 1;
+        num += 12;
+        num -= 14;
+        num *= 5;
+        num /= 7;
+        num++;
+        num--;
+        alert(num);
+
+        //Задание 5, 6
+        a = prompt("Введите А!");
+        b = prompt("Введите B!");
+        alert(`a = ${a} | b = ${b} \n
+         a > b : ${a>b} \n
+          a < b : ${a<b} \n
+           a = b : ${a == b}`);
+
+        //Задание 7 
+        b = prompt("Введите B!☻");
+        a = prompt("Введите А!☻");
+        alert(`a = ${a} b = ${b} \n a === b ? —  ${+a === +b}`);
+
+*/
+        //Задание 8
+var capacitance = parseFloat(prompt("Введите емкость конденсатора C (в фарадах):"));
+var inductance = parseFloat(prompt("Введите индуктивность L (в генри):"));
+
+var period = 2 * Math.PI * Math.sqrt(inductance * capacitance);
+
+//частота f в герцах f = 1 / T
+var frequency = 1 / period;
+
+console.log("Период колебаний T: " + period + " секунд");
+console.log("Частота колебаний f: " + frequency + " герц");
+
+    </script>
+</body>
+</html>
