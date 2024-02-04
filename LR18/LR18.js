@@ -1,5 +1,3 @@
-
-
 const getWeekDay = (date) =>{
     const daysOfWeek = ["ВС", "ПН", "ВТ", "СР", "ЧТ", "ПТ", "СБ"];
     return daysOfWeek[date.getDay()];
@@ -50,23 +48,22 @@ const calculateAthleteStats = (startTime, finishTime, distance) => {
     }
 }
 
-//1
+//Задание 1
 let date = new Date(2012, 1, 20, 3, 12)
-console.log(date);
-//2
-console.log(getWeekDay(date));
-//3
-console.log(getLocalDay(date));
-//4
-console.log(getDateAgo(date,365));
-//5
-console.log( formatDate(new Date(new Date - 1)) ); // "прямо сейчас"
+console.log('Задание 1\n'+date);
+//Задание 2
+console.log('Задание 2\n'+getWeekDay(date));
+//Задание 3
+console.log('Задание 3\n'+getLocalDay(date));
+//Задание 4
+console.log('Задание 4\n'+getDateAgo(date,365));
+//Задание 5
+console.log('Задание 5\n'+formatDate(new Date(new Date - 1)) ); // "прямо сейчас"
 console.log( formatDate(new Date(new Date - 30 * 1000)) ); // "30 сек. назад"
 console.log( formatDate(new Date(new Date - 5 * 60 * 1000)) ); // "5 мин. назад"
 console.log( formatDate(new Date(new Date - 86400 * 1000)) );
-//6.1
-console.log(customDate(new Date()))
-//6.2
+//Задание 6.1
+console.log('Задание 6.1\n'+customDate(new Date()))
+//Задание 6.2
 stats = calculateAthleteStats('10:10:00','10:15:30',3000)
-console.log(`Дистанция пройдена со средней скоростью ${stats.averageSpeed} м/с за ${stats.elapsedTime} секунд`)
-
+console.log('Задание 6.2\n'+`Дистанция пройдена со средней скоростью ${stats.averageSpeed} м/с за ${stats.elapsedTime} секунд`)

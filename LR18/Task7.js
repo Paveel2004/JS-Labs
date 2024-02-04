@@ -10,12 +10,23 @@ printPaymentDetails = (users) => {
     for(const user of users){
         const paymentDate = new Date(user.date);
         const decadeNumber = Math.floor((paymentDate.getDate()-1)/10)+1;
-        user.toString();
         console.log(`Номер декады: ${decadeNumber}`);
-        console.log(`--------------------------------------------------`);
+        console.log(user.toString())
     }
 }
+const isWithinLastThreeMonths = (currentDate, paymentDate) => {
+    const threeMonthsAgo = new Date();
+    threeMonthsAgo.setMonth(currentDate.getMonth()-3);
 
+    return paymentDate.getTime() >= threeMonthsAgo.getTime() && paymentDate.getTime() <= currentDate.getTime();
+}
+const printWithLastThreeMonth = (users) => {
+    for (let i = 0; i < users.length; i++) {
+        if (isWithinLastThreeMonths(new Date(), new Date(users[i].date))) {
+            console.log(users[i].toString());
+        }
+    }
+}
 
 class UtilityBillAccountingSystem{
     constructor(personalAccount, FIO, service, accuredForPayment,date, sum){
@@ -38,22 +49,6 @@ class UtilityBillAccountingSystem{
 --------------------------------------------------`);
     }
 }
-
-const isWithinLastThreeMonths = (currentDate, paymentDate) => {
-    const threeMonthsAgo = new Date();
-    threeMonthsAgo.setMonth(currentDate.getMonth()-3);
-
-    return paymentDate.getTime() >= threeMonthsAgo.getTime() && paymentDate.getTime() <= currentDate.getTime();
-}
-
-const printWithLastThreeMonth = (users) => {
-    for (let i = 0; i < users.length; i++) {
-        if (isWithinLastThreeMonths(new Date(), new Date(users[i].date))) {
-            console.log(users[i].toString());
-        }
-    }
-}
-
 
 users = [];
 
