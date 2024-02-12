@@ -1,0 +1,50 @@
+[
+  {
+    "personalAccount": 23,
+    "FIO": "Ded Maxim Ivanovish",
+    "service": "Gaz",
+    "accuredForPayment": 1000,
+    "date": "2001-01-01",
+    "sum": 993
+  },
+  {
+    "personalAccount": 23,
+    "FIO": "Zubenko Mihail Petrovich",
+    "service": "Gaz",
+    "accuredForPayment": 986,
+    "date": "2001-01-01",
+    "sum": 979
+  },
+  {
+    "personalAccount": 23,
+    "FIO": "Natalya Mirskaya Pehota",
+    "service": "Gaz",
+    "accuredForPayment": 972,
+    "date": "2001-01-01",
+    "sum": 965
+  },
+  {
+    "personalAccount": 23,
+    "FIO": "Maykl Jordan Mask",
+    "service": "Gaz",
+    "accuredForPayment": 958,
+    "date": "2001-01-01",
+    "sum": 951
+  },
+  {
+    "personalAccount": 23,
+    "FIO": "Billy Herrington Romanovich",
+    "service": "Gaz",
+    "accuredForPayment": 944,
+    "date": "2001-01-01",
+    "sum": 937
+  },
+  {
+    "personalAccount": 23,
+    "FIO": "Zubenko Natalya Petrovna",
+    "service": "Gaz",
+    "accuredForPayment": 930,
+    "date": "2001-01-01",
+    "sum": 923
+  }
+]
