@@ -36,5 +36,3 @@ fs.readFile(fileName, 'utf-8', (err, data) => {
     const parsedData=JSON.parse(data);
     console.log(`Данные прочитаны из .json файла ${JSON.stringify(parsedData,null,2)}`)
 })
-
-
